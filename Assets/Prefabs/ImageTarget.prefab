@@ -28,6 +28,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -46,13 +47,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PreviewVisible: 1
   RuntimeOcclusion: 0
+  RuntimeCollider: 0
   mTrackableName: Drone
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/test.xml
   mAspectRatio: 1.7265774
   mImageTargetType: 0
-  mWidth: 503
-  mHeight: 868.46844
+  mWidth: 5.03
+  mHeight: 8.684685
   mRuntimeTexture: {fileID: 0}
   mMotionHint: 1
   mTrackingOptimization: 2

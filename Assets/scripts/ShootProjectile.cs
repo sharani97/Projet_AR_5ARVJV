@@ -21,7 +21,7 @@ public class ShootProjectile : MonoBehaviour
     // Fonction de tir du projectile depuis la caméra AR
     public void Shoot()
     {
-        GameObject projectile = Instantiate(projectilePrefab, transform.position, transform.rotation);
+        GameObject projectile = Instantiate(projectilePrefab, ARCamera.transform.position, ARCamera.transform.rotation);
         Rigidbody rb = projectile.GetComponent<Rigidbody>();
         rb.AddForce(ARCamera.transform.forward * shootForce, ForceMode.Impulse);
 
@@ -30,6 +30,12 @@ public class ShootProjectile : MonoBehaviour
         if (Physics.Raycast(ARCamera.transform.position, ARCamera.transform.forward, out hit, raycastLength))
         {
             Debug.Log("Hit " + hit.transform.name);
+        }
+        
+        //if we hit object tagged target then destroy the target after 4 seconds
+        if (hit.transform.tag == "Target")
+        {
+            Destroy(hit.transform.gameObject, 4f);
         }
 
         // Destruction du projectile après 2 secondes

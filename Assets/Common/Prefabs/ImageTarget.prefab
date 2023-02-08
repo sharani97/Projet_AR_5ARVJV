@@ -80,13 +80,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PreviewVisible: 1
   RuntimeOcclusion: 0
+  RuntimeCollider: 0
   mTrackableName: Drone
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/test.xml
   mAspectRatio: 1.7265774
   mImageTargetType: 0
-  mWidth: 3017.9998
-  mHeight: 5210.81
+  mWidth: 30.18
+  mHeight: 52.108105
   mRuntimeTexture: {fileID: 0}
   mMotionHint: 1
   mTrackingOptimization: 2

@@ -8439,6 +8439,7 @@ GameObject:
   - component: {fileID: 2100022887}
   - component: {fileID: 2100022886}
   - component: {fileID: 2100022888}
+  - component: {fileID: 2100022890}
   - component: {fileID: 2100022892}
   - component: {fileID: 2100022891}
   - component: {fileID: 2100022894}
@@ -8591,6 +8592,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneOrientation: 2
+--- !u!114 &2100022890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100022880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfa02ef2d15ca4b5682c5a9c049acd68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NavigationHandler: {fileID: 854532514}
 --- !u!54 &2100022891
 Rigidbody:
   m_ObjectHideFlags: 0
