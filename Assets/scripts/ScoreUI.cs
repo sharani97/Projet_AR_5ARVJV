@@ -16,6 +16,4 @@ public class ScoreUI : MonoBehaviour
             scoreText.transform.SetParent(transform);
         }
     }
-    
-    
 }

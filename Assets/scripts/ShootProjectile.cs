@@ -49,11 +49,11 @@ public class ShootProjectile : MonoBehaviourPunCallbacks
         //if we hit object tagged target then destroy the target after 4 seconds
         if (hit.transform.tag == "Target")
         {
-            //update the score of the player who hit the target
-            scoreManager.playerScores[PhotonNetwork.LocalPlayer.ActorNumber - 1].score += 1;
-            //destroy the target
-            
-           
+            ScoreManager scoreManager = GameObject.FindObjectOfType<ScoreManager>();
+            scoreManager.UpdateScoreOnNetwork(PhotonNetwork.LocalPlayer.NickName, 1);
+            Debug.Log("the score of the player "+PhotonNetwork.LocalPlayer.NickName+" is "+scoreManager.playerScores[0].score);
+
+
             StartCoroutine(DestroyTarget(hit.transform.gameObject));
             
             
