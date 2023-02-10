@@ -53,7 +53,7 @@ public class MenuManager : MonoBehaviourPunCallbacks {
         Debug.Log("Room joined, updating LobbyUI");
         photonView.RPC("UpdateLobbyUI", RpcTarget.All);
     }
-    public override void OnPlayerLeftRoom(Player otherPlayer) {
+    public override void OnPlayerLeftRoom(Photon.Realtime.Player otherPlayer) {
         UpdateLobbyUI();
     }
     
@@ -62,11 +62,11 @@ public class MenuManager : MonoBehaviourPunCallbacks {
     public void UpdateLobbyUI() {
         Debug.Log("Updating lobby!");
         playerList = "";
-        foreach (Player player in PhotonNetwork.PlayerList) {
+        foreach (Photon.Realtime.Player player in PhotonNetwork.PlayerList) {
             if (player.IsMasterClient) {
                 Debug.Log("Master player is:" + player.NickName);
                 playerList += player.NickName + " (Host)\n";
-                //Debug.Log("Player list (master) : " + playerList);
+                //Debug.Log("Player list (master) : " + playerList)
             }
             else { playerList += player.NickName + "\n"; }
         }
