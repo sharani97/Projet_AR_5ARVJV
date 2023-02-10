@@ -57,7 +57,8 @@ public class GameManager : MonoBehaviourPunCallbacks {
         playerScript.photonView.RPC("Initialize", RpcTarget.All, PhotonNetwork.LocalPlayer);
     }
     public PlayerController GetPlayer(int playerID){
-        return players.First(x => x.id == playerID);
+        //return players.First(x => x.id == playerID);
+        return players.First(x => x.photonView.Owner.ActorNumber == playerID);
     }
     public PlayerController GetPlayer(GameObject playerObj){
         return players.First(x => x.gameObject == playerObj);

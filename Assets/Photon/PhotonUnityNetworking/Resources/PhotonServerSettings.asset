@@ -41,6 +41,9 @@ MonoBehaviour:
   - ImInGame
   - Initialize
   - UpdateLobbyUI
+  - AddScore
+  - UpdateScore
+  - UpdateScoreOnNetwork
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

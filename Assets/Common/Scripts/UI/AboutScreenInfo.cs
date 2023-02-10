@@ -32,6 +32,7 @@ public class AboutScreenInfo
             { "ModelTargetsTest", "Model Targets Test" },
             { "AreaTargets", "Area Targets" },
             { "AreaTargetCapture", "Area Target Capture" },
+            { "Barcodes", "Barcodes" },
         };
 
         var vuforiaVersion = VuforiaApplication.GetVuforiaLibraryVersion();
@@ -74,7 +75,7 @@ public class AboutScreenInfo
             "\n• <link=https://developer.vuforia.com/legal/EULA><color=blue><u>Terms of Use</u></color></link>" +
             "\n• <link=https://developer.vuforia.com/legal/statistics><color=blue><u>Statistics</u></color></link>" +
             "\n\n" +
-            "© 2021 PTC Inc. All Rights Reserved." +
+            "© 2022 PTC Inc. All Rights Reserved." +
             "\n";
         var targetPDFsURL = "<link=https://library.vuforia.com/content/vuforia-library/en/articles/Solution/sample-apps-target-pdfs.html>";
 
@@ -439,6 +440,28 @@ public class AboutScreenInfo
             "\n• Name a target" +
             "\n• Start/Pause/Resume/Stop capture process" +
             "\n• Test generated target." +
+            "\n\n" +
+            footer + "\n");
+
+        // Barcodes
+        mDescriptions.Add(
+            "Barcodes",
+            description +
+            "\nThe Barcode sample shows how to activate 1D/2D " +
+            "barcode scanning, select the barcode the user is " +
+            "aiming at and display detection results." +
+            "\n\n" +
+            keyFunctionality +
+            "\n• Select camera settings optimized for detection of small objects" + 
+            "\n• Activate Barcode detection" +
+            "\n• Display a barcode search reticle" + 
+            "\n• Select one out of multiple barcode detections" + 
+            "\n• Render the outline of a barcode detection" + 
+            "\n• Test generated target" +
+            "\n\n" +
+            instructions +
+            "\n• Activate 1D or 2D barcode detection in the menu" +
+            "\n• Point at barcodes" +
             "\n\n" +
             footer + "\n");
     }
